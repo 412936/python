@@ -1,6 +1,6 @@
 #Дружинина Дарья R3142 412936
 import csv
-from random import randin
+from random import randint
 #Задание№1
 with open('books.csv', 'r', encoding='windows-1251') as csvfile:
     table = csv.reader(csvfile, delimiter=';')
@@ -23,7 +23,7 @@ with open('books.csv', 'r', encoding='windows-1251') as csvfile:
         print(books)
 
 #Задание№3
-result = [randint(1, 9411) for x in range(20)]
+result = [randint(1, 9410) for x in range(20)]
 flag = []
 with open('books.csv', encoding='windows-1251') as csvfile:
     book = [i for i in csv.reader(csvfile, delimiter = ';')]
@@ -31,9 +31,9 @@ with open('books.csv', encoding='windows-1251') as csvfile:
         reader_list = list(book)
     for i in flag:
         row = reader_list[i]
-    with open('resultat.txt', 'w') as csvfile:
+    with open('resultat.txt', 'w') as f:
         for i in range(1,21):
-            csvfile.writelines(str(i) + ' ' + book[i][3] + '. ' + book[i][1] + ' - ' + book[i][6] + '\n')
+            f.writelines(f'{str(i)} {book[i][3]}.  {book[i][1]} -  {book[i][6]} \n')
 
 #Доп задания
 tag = []

@@ -5,6 +5,7 @@ import string
 
 def close():
     window.destroy()
+    
 def generate_key():
     key = ''
     block_sum = 0
@@ -32,6 +33,7 @@ def generate_key():
     formatted_key = f"{key[:5]}-{key[5:9]}-{key[:4]}"
     key_field.delete(0, tk.END)
     key_field.insert(0, formatted_key)
+    
 def get_symbol_weight(symbol):
     return 1
 
